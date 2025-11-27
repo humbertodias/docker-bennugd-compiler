@@ -6,7 +6,7 @@ A lightweight Docker image for **cross-compiling** [BennuGD](https://www.bennugd
 
 Docker Hub: [hldtux/bennugd-compiler](https://hub.docker.com/r/hldtux/bennugd-compiler)
 
-## 🚀 How to Use
+## 🚀 Usage
 
 Mount your project directory and run the desired build command. eg:
 
