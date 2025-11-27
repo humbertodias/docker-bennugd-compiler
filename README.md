@@ -1,6 +1,6 @@
 [![Deploy](https://github.com/humbertodias/docker-bennugd-compiler/actions/workflows/deploy.yml/badge.svg)](https://github.com/humbertodias/docker-bennugd-compiler/actions/workflows/deploy.yml)
 
-# BennuGD Compiler Docker Image
+# BennuGD 1.x Compiler
 
 A lightweight Docker image for **cross-compiling** [BennuGD](https://www.bennugd.org) applications
 
