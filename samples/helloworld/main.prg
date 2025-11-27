@@ -1,0 +1,5 @@
+import "mod_say"
+Process Main()
+Begin
+  say("Hello World!");
+End
