@@ -2,13 +2,9 @@
 
 # BennuGD Compiler Docker Image
 
-A lightweight Docker image for **cross-compiling BennuGD applications**
+A lightweight Docker image for **cross-compiling** [BennuGD](https://www.bennugd.org) applications
 
 Docker Hub: [hldtux/bennugd-compiler](https://hub.docker.com/r/hldtux/bennugd-compiler)
-
-## 🧩 Included Components
-
-* [bennugd-r333-i386](https://www.bennugd.org/downloads/old/bennugd-r333-i386-linux-gnu.tar.gz)
 
 ## 🚀 How to Use
 
