@@ -12,7 +12,7 @@ Docker Hub: [hldtux/bennugd-compiler](https://hub.docker.com/r/hldtux/bennugd-co
 
 ## 🚀 How to Use
 
-Mount your project directory and run the desired build command. Below are examples for each SDL version and target.
+Mount your project directory and run the desired build command. eg:
 
 #### BennuGD 1.x
 
