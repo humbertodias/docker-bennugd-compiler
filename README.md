@@ -26,7 +26,7 @@ source ~/.bashrc  # or ~/.zshrc
 Now you can compile and run your BennuGD projects directly from the current directory:
 
 ```shell
-cd samples/helloworld
+cd samples/mod_say
 bgdc main.prg   # compile
 bgdi main.dcb   # run
 ```
