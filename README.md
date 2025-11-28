@@ -2,25 +2,45 @@
 
 # BennuGD 1.x Compiler
 
-A lightweight Docker image for **cross-compiling** [BennuGD](https://www.bennugd.org) applications
+A lightweight Docker image for **cross-compiling** [BennuGD](https://www.bennugd.org) applications.
 
 Docker Hub: [hldtux/bennugd-compiler](https://hub.docker.com/r/hldtux/bennugd-compiler)
 
-## 🚀 Usage
+## 🚀 Setup
 
-Mount your project directory and run the desired build command. eg:
+Add the following functions to your shell (`~/.bashrc` or `~/.zshrc`):
 
-#### Compile/Run
+```bash
+bgdc() { docker run --rm -ti -v "$(pwd)":/workdir hldtux/bennugd-compiler:r333 bash -ic "bgdc \"$@\""; }
+bgdi() { docker run --rm -ti -v "$(pwd)":/workdir hldtux/bennugd-compiler:r333 bash -ic "bgdi \"$@\""; }
+```
+
+Then reload your shell:
 
 ```shell
-BGD_VERSION=r333
-BGD_PROJECT=./samples/helloworld
-docker run --rm -ti \
-  -v $BGD_PROJECT:/workdir \
-  hldtux/bennugd-compiler:$BGD_VERSION \
-  bash -ic 'bgdc main.prg ; bgdi main.dcb'
+source ~/.bashrc  # or ~/.zshrc
 ```
-Output
+
+## 🚀 Usage
+
+Now you can compile and run your BennuGD projects directly from the current directory:
+
+```shell
+cd samples/helloworld
+bgdc main.prg   # compile
+bgdi main.dcb   # run
+```
+
+Or in one line:
+
+```shell
+bgdc main.prg ; bgdi main.dcb
+```
+
+---
+
+### Output Example
+
 ```
 BGDC 1.0.0 (Jun 25 2016 23:17:40)
 Bennu Game Development Compiler
@@ -41,8 +61,8 @@ File main.dcb compiled (13211 bytes):
   System processes              5
   Globals vars                  3
   Locals vars                   7
-  Private vars                  0
-  Publics vars                  0
+  Private vars                   0
+  Publics vars                   0
   Identifiers                 184
   Structs                       1
   Strings                       5 (42 bytes)
