@@ -11,8 +11,21 @@ Docker Hub: [hldtux/bennugd-compiler](https://hub.docker.com/r/hldtux/bennugd-co
 Add the following functions to your shell (`~/.bashrc` or `~/.zshrc`):
 
 ```bash
-bgdc() { docker run --rm -ti -v "$(pwd)":/workdir hldtux/bennugd-compiler:r333 bash -ic "bgdc \"$@\""; }
-bgdi() { docker run --rm -ti -v "$(pwd)":/workdir hldtux/bennugd-compiler:r333 bash -ic "bgdi \"$@\""; }
+bgdc() {
+    docker run --rm -it \
+        -v "$PWD":/workdir \
+        -v /tmp/.X11-unix:/tmp/.X11-unix \
+        hldtux/bennugd-compiler:r333 \
+        bash -ic "bgdc \"$@\""
+}
+bgdi() {
+    docker run --rm -it \
+        -v "$PWD":/workdir \
+        -e DISPLAY=$DISPLAY \
+        -v /tmp/.X11-unix:/tmp/.X11-unix \
+        hldtux/bennugd-compiler:r333 \
+        bash -ic "bgdi \"$@\""
+}
 ```
 
 Then reload your shell:
