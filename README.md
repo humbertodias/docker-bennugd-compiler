@@ -37,8 +37,6 @@ Or in one line:
 bgdc main.prg ; bgdi main.dcb
 ```
 
----
-
 ### Output Example
 
 ```
