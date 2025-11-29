@@ -1,14 +1,14 @@
 [![Deploy](https://github.com/humbertodias/docker-bennugd-compiler/actions/workflows/deploy.yml/badge.svg)](https://github.com/humbertodias/docker-bennugd-compiler/actions/workflows/deploy.yml)
 
-# BennuGD 1.x Compiler
+# BennuGD 1.x Compiler (Docker)
 
-A lightweight Docker image for **cross-compiling** [BennuGD](https://www.bennugd.org) applications.
+A lightweight Docker image for **cross-compiling** [BennuGD](https://www.bennugd.org) applications on any platform.
 
-Docker Hub: [hldtux/bennugd-compiler](https://hub.docker.com/r/hldtux/bennugd-compiler)
+Docker Hub: **[hldtux/bennugd-compiler](https://hub.docker.com/r/hldtux/bennugd-compiler)**
 
 ## 🚀 Setup
 
-Add the following functions to your shell (`~/.bashrc` or `~/.zshrc`):
+Add the following aliases to your shell (`~/.bashrc` or `~/.zshrc`):
 
 ```bash
 bgdc() {
@@ -27,24 +27,25 @@ bgdi() {
 }
 ```
 
-Then reload your shell:
+Reload your shell:
 
 ```shell
-source ~/.bashrc  # or ~/.zshrc
+source ~/.bashrc   # or ~/.zshrc
 ```
 
-## 🚀 Usage
+## 🛠️ Usage
 
-Now you can compile and run your BennuGD projects directly from the current directory:
+Once the aliases are loaded, you can compile and run BennuGD projects directly from the current directory.
 
-* Console
+### ▶️ Console Example
+
 ```shell
 cd samples/mod_say
-bgdc main.prg   # compile
-bgdi main.dcb   # run
+bgdc main.prg       # Compile
+bgdi main.dcb       # Run
 ```
 
-### Output Example
+**Output**
 
 ```
 BGDC 1.0.0 (Jun 25 2016 23:17:40)
@@ -52,8 +53,7 @@ Bennu Game Development Compiler
 
 Copyright (c) 2006-2016 SplinterGU (Fenix/BennuGD)
 Copyright (c) 2002-2006 Fenix Team (Fenix)
-Copyright (c) 1999-2002 Jos� Luis Cebri�n Pag�e (Fenix)
-
+Copyright (c) 1999-2002 José Luis Cebrián Pagüe (Fenix)
 
 File main.dcb compiled (13211 bytes):
 
@@ -66,8 +66,8 @@ File main.dcb compiled (13211 bytes):
   System processes              5
   Globals vars                  3
   Locals vars                   7
-  Private vars                   0
-  Publics vars                   0
+  Private vars                  0
+  Publics vars                  0
   Identifiers                 184
   Structs                       1
   Strings                       5 (42 bytes)
@@ -75,15 +75,15 @@ File main.dcb compiled (13211 bytes):
 Hello World!
 ```
 
-* Graphic
+### 🖼️ Graphic Mode
 
 ```shell
 xhost +
 cd samples/mod_text
-bgdc main.prg   # compile
-bgdi main.dcb   # run
+bgdc main.prg
+bgdi main.dcb
 ```
 
-### Output Example
+**Output**
 
-![](samples/mod_text//mod_text.png)
+![](samples/mod_text/mod_text.png)
