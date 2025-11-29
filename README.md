@@ -14,7 +14,6 @@ Add the following functions to your shell (`~/.bashrc` or `~/.zshrc`):
 bgdc() {
     docker run --rm -it \
         -v "$PWD":/workdir \
-        -v /tmp/.X11-unix:/tmp/.X11-unix \
         hldtux/bennugd-compiler:r333 \
         bash -ic "bgdc \"$@\""
 }
@@ -38,16 +37,11 @@ source ~/.bashrc  # or ~/.zshrc
 
 Now you can compile and run your BennuGD projects directly from the current directory:
 
+* Console
 ```shell
 cd samples/mod_say
 bgdc main.prg   # compile
 bgdi main.dcb   # run
-```
-
-Or in one line:
-
-```shell
-bgdc main.prg ; bgdi main.dcb
 ```
 
 ### Output Example
@@ -80,3 +74,16 @@ File main.dcb compiled (13211 bytes):
 
 Hello World!
 ```
+
+* Graphic
+
+```shell
+xhost +
+cd samples/mod_text
+bgdc main.prg   # compile
+bgdi main.dcb   # run
+```
+
+### Output Example
+
+![](samples/mod_text//mod_text.png)
